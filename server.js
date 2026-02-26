@@ -35,7 +35,10 @@ app.get('/', (req, res) => {
 app.use(errorHandler);
 
 // Start server
-const PORT = process.env.PORT || 4000;
-app.listen(PORT, () => {
-  console.log(`Server running on http://localhost:${PORT}`);
-});
+// const PORT = process.env.PORT || 4000;
+// app.listen(PORT, () => {
+//   console.log(`Server running on http://localhost:${PORT}`);
+// });
+
+// Export the app for Vercel
+export default app;
