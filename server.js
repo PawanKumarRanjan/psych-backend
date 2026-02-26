@@ -27,16 +27,8 @@ app.use('/api/questions', questionRoutes);
 app.use('/api/career-domains', careerDomainRoutes);
 
 // Health check endpoint
-app.get('/api/health', (req, res) => {
+app.get('/', (req, res) => {
   res.json({ status: 'Server is running' });
-});
-
-// 404 handler
-app.use((req, res) => {
-  res.status(404).json({
-    success: false,
-    message: 'Route not found',
-  });
 });
 
 // Error handling middleware (must be last)
